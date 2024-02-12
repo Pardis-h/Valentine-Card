@@ -18,12 +18,12 @@ export default function Home() {
         />
         <label
           htmlFor="open"
-          className={`absolute w-80 h-80 bg-transparent left-0 top-0 cursor-pointer z-10`}
+          className={`absolute w-80 h-80 bg-transparent left-0 top-0 cursor-pointer z-20`}
         ></label>
         <div
-          className={`relative w-80 h-80 origin-left shadow-custom1 duration-300 bg-red-100
+          className={`relative w-80 h-80 origin-left shadow-custom1 duration-300 bg-red-100 z-10
         before:absolute before:content-[''] before:w-72 before:h-72 before:bg-red-500 before:top-4 before:left-4
-        peer-checked/draft:rotate-[-155deg] card-front`}
+        peer-checked/draft:rotate-[-155deg] peer-checked/draft:z-0 card-front`}
         >
           <p
             className={`relative w-52 h-40 bg-red-100 top-20 left-14 text-[#333] text-4xl flex justify-center items-center
@@ -36,7 +36,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className={`absolute w-80 h-80 bg-red-100 -z-10 left-0 top-0 shadow-custom2`}
+          className={`absolute w-80 h-80 bg-red-100 z-0 left-0 top-0 shadow-custom2`}
         >
           <p
             className={`
@@ -51,17 +51,17 @@ export default function Home() {
             Eshghe ghashangam
           </p>
           <div
-            className={`heart relative bg-red-600 h-16 w-16 top-[220px] left-[120px] rotate-[-45deg] 
+            className={` ${!!check ? "block" : "hidden"}  heart relative bg-red-600 h-16 w-16 top-[220px] left-[120px] rotate-[-45deg] 
           before:absolute before:content-[''] before:bg-red-600 before:w-16 before:h-16 before:rounded-[50%] before:top-[-30px] before:left-0
           after:absolute after:content-[''] after:bg-red-600 after:w-16 after:h-16 after:rounded-[50%] after:left-[30px] after:top-0 
           `}
           ></div>
           <div
-            className={`smile absolute w-8 h-4 bg-[#333] z-10 rounded-br-[100px] rounded-bl-[100px] top-[240px] left-[136px] overflow-hidden
+            className={`${!!check ? "block" : "hidden"}  smile absolute w-8 h-4 bg-[#333] z-10 rounded-br-[100px] rounded-bl-[100px] top-[240px] left-[136px] overflow-hidden
             before:absolute before:content-[''] before:w-5 before:h-5 before:bg-[#030202] before:rounded-[50%] before:top-[5px] before:left-[5px]
             `}
           ></div>
-          <div className="eyes absolute rounded-[50%] w-[10px] h-[10px] z-10 bg-[#333] top-[230px] left-[166px] shadow-custom4"></div>
+          <div className={`${!!check ? "block" : "hidden"}  eyes  absolute rounded-[50%] w-[10px] h-[10px] z-10 bg-[#333] top-[230px] left-[166px] shadow-custom4`}></div>
           <div className={`hearts ${!!check ? "block" : "hidden"} `}>
             <div className="one">
               <svg
