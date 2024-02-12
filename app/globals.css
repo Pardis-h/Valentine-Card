@@ -81,6 +81,7 @@ p {
   /* transform: rotate(-45deg); */
   width: 28px;
   top: 50px;
+  z-index: 200;
 }
 
 /* .one:before,
