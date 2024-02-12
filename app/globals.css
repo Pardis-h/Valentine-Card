@@ -73,36 +73,14 @@ p {
 .three,
 .four,
 .five {
-  /* background-color: red; */
   display: inline-block;
   height: 28px;
   margin: 0 10px;
   position: relative;
-  /* transform: rotate(-45deg); */
   width: 28px;
   top: 50px;
   z-index: 200;
 }
-
-/* .one:before,
-.one:after, .two:before, .two:after, .three:before, .three:after, .four:before, .four:after, .five:before, .five:after {
-  content: "";
-  background-color: red;
-  border-radius: 50%;
-  height: 10px;
-  position: absolute;
-  width: 10px;
-}
-
-.one:before, .two:before, .three:before, .four:before, .five:before {
-  top: -5px;
-  left: 0;
-}
-
-.one:after, .two:after, .three:after, .four:after, .five:after {
-  left: 5px;
-  top: 0;
-} */
 
 .one {
   left: 10px;
@@ -137,5 +115,24 @@ p {
   100% {
     transform: translateY(-180px) scale(1.5);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width:900px) {
+  #open:checked ~ .card-front {
+    transform: rotateY(-120deg);
+    /* box-shadow: inset 100px 60px 100px rgba(0, 0, 0, 0.236),
+    20px 0 20px rgba(0, 0, 0, 0.105); */
+  }
+}
+@media screen and (max-width:768px) {
+  #open:checked ~ .card-front {
+    transform: rotateY(-93deg);
+  }
+  #open:checked ~ .card-front:before {
+    z-index: 5;
+    background-color: #efeced;
+    box-shadow: inset 100px 20px 100px rgba(75, 73, 73, 0.1),
+      30px 0 50px rgba(0, 0, 0, 0.1);
   }
 }

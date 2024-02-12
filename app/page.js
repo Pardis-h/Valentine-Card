@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <main className="flex w-full bg-red-400 h-screen items-center justify-center p-24">
       <div
-        //  style={{transformStyle:'preserve-3d',transform: perspective('2500px')}}
         className="relative w-80 h-80 valentines-day-card"
       >
         <input
@@ -14,7 +13,7 @@ export default function Home() {
           type="checkbox"
           name="open"
           id="open"
-          onChange={() => setCheck(!check)}
+          onChange={() => !check ?setTimeout(()=>setCheck(!check),100) :setCheck(!check)}
         />
         <label
           htmlFor="open"
@@ -23,7 +22,7 @@ export default function Home() {
         <div
           className={`relative w-80 h-80 origin-left shadow-custom1 duration-300 bg-red-100 z-10
         before:absolute before:content-[''] before:w-72 before:h-72 before:bg-red-500 before:top-4 before:left-4
-        peer-checked/draft:rotate-[-155deg] peer-checked/draft:z-0 card-front`}
+        peer-checked/draft:rotate-[-50deg] peer-checked/draft:z-0 card-front`}
         >
           <p
             className={`relative w-52 h-40 bg-red-100 top-20 left-14 text-[#333] text-4xl flex justify-center items-center
@@ -57,11 +56,11 @@ export default function Home() {
           `}
           ></div>
           <div
-            className={`${!!check ? "block" : "hidden"}  smile absolute w-8 h-4 bg-[#333] z-10 rounded-br-[100px] rounded-bl-[100px] top-[240px] left-[136px] overflow-hidden
+            className={`${!!check ? "block" : "hidden"}  smile absolute w-8 h-4 bg-[#333] z-[5] rounded-br-[100px] rounded-bl-[100px] top-[240px] left-[136px] overflow-hidden
             before:absolute before:content-[''] before:w-5 before:h-5 before:bg-[#030202] before:rounded-[50%] before:top-[5px] before:left-[5px]
             `}
           ></div>
-          <div className={`${!!check ? "block" : "hidden"}  eyes  absolute rounded-[50%] w-[10px] h-[10px] z-10 bg-[#333] top-[230px] left-[166px] shadow-custom4`}></div>
+          <div className={`${!!check ? "block" : "hidden"}  eyes  absolute rounded-[50%] w-[10px] h-[10px] z-[5] bg-[#333] top-[230px] left-[166px] shadow-custom4`}></div>
           <div className={`hearts ${!!check ? "block" : "hidden"} `}>
             <div className="one">
               <svg
