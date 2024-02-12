@@ -33,25 +33,30 @@ p {
     30px 0 50px rgba(0, 0, 0, 0.1);
 }
 .heart {
-  animation: .8s beat infinite;
+  animation: 0.8s beat infinite;
 }
 .eyes {
   transform-origin: 50%;
   animation: close 2s infinite;
 }
 @keyframes close {
-  0%, 100% {
-      transform: scale(1, .05);
+  0%,
+  100% {
+    transform: scale(1, 0.05);
   }
-  5%, 95% {
-      transform: scale(1, 1);
+  5%,
+  95% {
+    transform: scale(1, 1);
   }
 }
 @keyframes beat {
-  0%, 40%, 100% {
+  0%,
+  40%,
+  100% {
     transform: scale(1) rotate(-45deg);
   }
-  25%, 60% {
+  25%,
+  60% {
     transform: scale(1.1) rotate(-45deg);
   }
 }
@@ -59,21 +64,25 @@ p {
 /* hearrts */
 
 .hearts {
-  position: absolute  
+  position: absolute;
 }
 
-.one, .two, .three, .four, .five {
-  background-color: red;
+.one,
+.two,
+.three,
+.four,
+.five {
+  /* background-color: red; */
   display: inline-block;
-  height: 10px;
+  height: 28px;
   margin: 0 10px;
   position: relative;
-  transform: rotate(-45deg);
-  width: 10px;
-  top:50px;
+  /* transform: rotate(-45deg); */
+  width: 28px;
+  top: 50px;
 }
 
-.one:before,
+/* .one:before,
 .one:after, .two:before, .two:after, .three:before, .three:after, .four:before, .four:after, .five:before, .five:after {
   content: "";
   background-color: red;
@@ -91,40 +100,40 @@ p {
 .one:after, .two:after, .three:after, .four:after, .five:after {
   left: 5px;
   top: 0;
-}
-  
+} */
+
 .one {
-  left:10px;
-  animation: heart 1s ease-out infinite; 
+  left: 10px;
+  animation: heart 1s ease-out infinite;
 }
 
 .two {
-  left:30px;
-  animation: heart 2s ease-out infinite; 
+  left: 30px;
+  animation: heart 2s ease-out infinite;
 }
 
 .three {
-  left:50px;
+  left: 50px;
   animation: heart 1.5s ease-out infinite;
 }
 
 .four {
-  left:70px;
+  left: 70px;
   animation: heart 2.3s ease-out infinite;
 }
 
 .five {
-  left:90px;
+  left: 80px;
   animation: heart 1.7s ease-out infinite;
 }
 
 @keyframes heart {
-  0%{
-    transform: translateY(0) rotate(-45deg) scale(0.3);
-    opacity: 1;
-  }
-  100%{
-    transform: translateY(-150px) rotate(-45deg) scale(1.3);
+  0% {
+    transform: translateY(80px) scale(0.3);
     opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-180px) scale(1.5);
+    opacity: 1;
   }
 }
