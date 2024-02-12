@@ -18,7 +18,9 @@ module.exports = {
         custom2:
           "inset 100px 20px 100px rgba(0,0,0,0.22), 100px 20px 100px rgba(0,0,0,0.1)",
         custom3: "30px 0 #dc2626",
+        custom32: "19px 0 #dc2626",
         custom4: "-39px 0 #333",
+        custom42: "-16px 0 #333",
       },
     },
   },

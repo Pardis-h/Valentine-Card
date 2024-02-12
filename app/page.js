@@ -5,62 +5,70 @@ export default function Home() {
   const [check, setCheck] = useState(false);
   return (
     <main className="flex w-full bg-red-400 h-screen items-center justify-center p-24">
-      <div
-        className="relative w-80 h-80 valentines-day-card"
-      >
+      <div className="relative w-44 h-44 lg:w-80 lg:h-80 valentines-day-card">
         <input
           className="hidden peer/draft"
           type="checkbox"
           name="open"
           id="open"
-          onChange={() => !check ?setTimeout(()=>setCheck(!check),100) :setCheck(!check)}
+          onChange={() =>
+            !check ? setTimeout(() => setCheck(!check), 100) : setCheck(!check)
+          }
         />
         <label
           htmlFor="open"
-          className={`absolute w-80 h-80 bg-transparent left-0 top-0 cursor-pointer z-20`}
+          className={`absolute w-44 h-44 lg:w-80 lg:h-80 bg-transparent left-0 top-0 cursor-pointer z-20`}
         ></label>
         <div
-          className={`relative w-80 h-80 origin-left shadow-custom1 duration-300 bg-red-100 z-10
-        before:absolute before:content-[''] before:w-72 before:h-72 before:bg-red-500 before:top-4 before:left-4
+          className={`relative w-44 h-44 lg:w-80 lg:h-80 origin-left shadow-custom1 duration-300 bg-red-100 z-10
+        before:absolute before:content-[''] before:w-36 before:h-36 before:lg:w-72 before:lg:h-72 before:bg-red-500 before:top-4 before:left-4
         peer-checked/draft:rotate-[-50deg] peer-checked/draft:z-0 card-front`}
         >
           <p
-            className={`relative w-52 h-40 bg-red-100 top-20 left-14 text-[#333] text-4xl flex justify-center items-center
+            className={`relative w-24 h-20 lg:w-52 lg:h-40 bg-red-100 top-12 left-10 lg:top-20 lg:left-14 text-[#333] text-lg lg:text-4xl flex justify-center items-center
             drop-shadow-lg text-center
-            before:absolute before:content-[''] before:bg-red-600 before:w-10 before:h-10 before:rotate-[-45deg] before:top-[-20px] before:left-[86px]
-            after:absolute after:content-[''] after:bg-red-600 after:w-10 after:h-10 after:rounded-[50%] after:top-[-35px] after:left-[71px] after:shadow-custom3
+            before:absolute before:content-[''] before:bg-red-600 before:w-5 before:h-5 before:lg:w-10 before:lg:h-10 before:rotate-[-45deg] before:top-[-10px] before:left-[40px] before:lg:top-[-20px] before:lg:left-[86px]
+            after:absolute after:content-[''] after:bg-red-600 after:w-5 after:h-5 after:lg:w-10 after:lg:h-10 after:rounded-[50%] after:top-[-20px] after:left-[30px] after:lg:top-[-35px] after:lg:left-[71px] after:shadow-custom32 after:lg:shadow-custom3
             `}
           >
             Click to open :)
           </p>
         </div>
         <div
-          className={`absolute w-80 h-80 bg-red-100 z-0 left-0 top-0 shadow-custom2`}
+          className={`absolute w-44 h-44 lg:w-80 lg:h-80 bg-red-100 z-0 left-0 top-0 shadow-custom2`}
         >
           <p
             className={`
-          absolute text-[#333] text-3xl top-[50px] w-80 text-center
-          before:absolute before:left-[5px] before:text-center before:w-80 before:content-["Valentine's"] before:top-[40px] before:text-red-600
-          after:absolute after:left-[5px] after:text-center after:w-80 after:content-["day!"] after:top-[80px]
+          absolute text-[#333] text-sm lg:text-3xl top-[30px] lg:top-[50px] w-44 lg:w-80  text-center
+          before:absolute before:left-[5px] before:text-center before:w-44 before:lg:w-80 before:content-["Valentine's"] before:top-[20px] before:lg:top-[40px] before:text-red-600
+          after:absolute after:left-[5px] after:text-center after:w-44 after:lg:w-80 after:content-["day!"] after:top-[40px] after:lg:top-[80px]
           `}
           >
             Happy
           </p>
-          <p className="absolute text-[#333] top-[20px] text-xl text-center w-80">
+          <p className="absolute text-[#333] top-[12px] lg:top-[20px] text-xs lg:text-xl text-center w-44 lg:w-80">
             Eshghe ghashangam
           </p>
           <div
-            className={` ${!!check ? "block" : "hidden"}  heart relative bg-red-600 h-16 w-16 top-[220px] left-[120px] rotate-[-45deg] 
-          before:absolute before:content-[''] before:bg-red-600 before:w-16 before:h-16 before:rounded-[50%] before:top-[-30px] before:left-0
-          after:absolute after:content-[''] after:bg-red-600 after:w-16 after:h-16 after:rounded-[50%] after:left-[30px] after:top-0 
+            className={` ${
+              !!check ? "block" : "hidden"
+            }  heart relative bg-red-600 h-8 w-8 lg:h-16 lg:w-16 top-[124px] lg:top-[220px] left-[80px] lg:left-[120px] rotate-[-45deg] 
+          before:absolute before:content-[''] before:bg-red-600 before:w-8 before:h-8 before:lg:w-16 before:lg:h-16 before:rounded-[50%] before:top-[-19px] before:lg:top-[-30px] before:left-0
+          after:absolute after:content-[''] after:bg-red-600 after:w-8 after:h-8 after:lg:w-16 after:lg:h-16 after:rounded-[50%] after:left-[19px] after:lg:left-[30px] after:top-0 
           `}
           ></div>
           <div
-            className={`${!!check ? "block" : "hidden"}  smile absolute w-8 h-4 bg-[#333] z-[5] rounded-br-[100px] rounded-bl-[100px] top-[240px] left-[136px] overflow-hidden
-            before:absolute before:content-[''] before:w-5 before:h-5 before:bg-[#030202] before:rounded-[50%] before:top-[5px] before:left-[5px]
+            className={`${
+              !!check ? "block" : "hidden"
+            }  smile absolute w-4 lg:w-8 h-2 lg:h-4 bg-[#333] z-[5] rounded-br-[100px] rounded-bl-[100px] top-[135px] lg:top-[240px] left-[88px] lg:left-[136px] overflow-hidden
+            before:absolute before:content-[''] before:w-3 before:h-3 before:lg:w-5 before:lg:h-5 before:bg-[#030202] before:rounded-[50%] before:top-[5px] before:left-[5px]
             `}
           ></div>
-          <div className={`${!!check ? "block" : "hidden"}  eyes  absolute rounded-[50%] w-[10px] h-[10px] z-[5] bg-[#333] top-[230px] left-[166px] shadow-custom4`}></div>
+          <div
+            className={`${
+              !!check ? "block" : "hidden"
+            }  eyes  absolute rounded-[50%] w-[5px] h-[5px] lg:w-[10px] lg:h-[10px] z-[5] bg-[#333] top-[127px] left-[101px] lg:top-[230px] lg:left-[166px] shadow-custom42 lg:shadow-custom4`}
+          ></div>
           <div className={`hearts ${!!check ? "block" : "hidden"} `}>
             <div className="one">
               <svg

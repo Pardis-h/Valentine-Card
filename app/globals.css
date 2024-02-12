@@ -2,11 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @layer base {
-  html,body,* {
-    font-family: "Mochiy Pop P One", sans-serif;
-  }
-} */
+
 body,
 *,
 p {
@@ -118,21 +114,57 @@ p {
   }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width: 1023px) {
+  #open:checked ~ .card-front:before {
+    width: 176px;
+    height: 176px;
+  }
+  .one,
+  .two,
+  .three,
+  .four,
+  .five {
+    height: 18px;
+    width: 18px;
+  }
+  .one {
+    left: 0px;
+    animation: heart 1s ease-out infinite;
+  }
+  
+  .two {
+    left: 10px;
+    animation: heart 2s ease-out infinite;
+  }
+  
+  .three {
+    left: 20px;
+    animation: heart 1.5s ease-out infinite;
+  }
+  
+  .four {
+    left: 30px;
+    animation: heart 2.3s ease-out infinite;
+  }
+  
+  .five {
+    left: 40px;
+    animation: heart 1.7s ease-out infinite;
+  }
+  @keyframes heart {
+    0% {
+      transform: translateY(60px) scale(0.3);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(-140px) scale(1.5);
+      opacity: 1;
+    }
+  }
+}
+ @media screen and (max-width: 768px) {
   #open:checked ~ .card-front {
     transform: rotateY(-120deg);
-    /* box-shadow: inset 100px 60px 100px rgba(0, 0, 0, 0.236),
-    20px 0 20px rgba(0, 0, 0, 0.105); */
   }
 }
-@media screen and (max-width:768px) {
-  #open:checked ~ .card-front {
-    transform: rotateY(-93deg);
-  }
-  #open:checked ~ .card-front:before {
-    z-index: 5;
-    background-color: #efeced;
-    box-shadow: inset 100px 20px 100px rgba(75, 73, 73, 0.1),
-      30px 0 50px rgba(0, 0, 0, 0.1);
-  }
-}
+
