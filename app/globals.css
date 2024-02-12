@@ -65,6 +65,7 @@ p {
 
 .hearts {
   position: absolute;
+  z-index: 200;
 }
 
 .one,
